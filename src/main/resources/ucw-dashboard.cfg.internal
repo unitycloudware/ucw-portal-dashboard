@@ -1,0 +1,2 @@
+# Internal configuration file for ucw-portal-dashboard
+ucw.dashboard.version=${build.number}

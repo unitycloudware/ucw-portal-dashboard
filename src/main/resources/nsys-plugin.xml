@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nsys-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugin-version="1">
+
+    <!-- Plugin Info -->
+
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${build.number}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+
+    <!-- Plugin Modules -->
+
+    <management-agent key="ucw-dashboard" name="UCW Dashboard"
+                      class="com.unitycloudware.portal.tutorial.dashboard.plugin.DashboardPlugin">
+        <dependency>org.nsys.daemon:scheduler</dependency>
+    </management-agent>
+
+    <!-- Main Navigation [BEGIN] -->
+
+    <navigation-section key="ucw-portal-tutorial_nav-main_demo" name="UCW Demo"
+                        location="system.top.navigation.bar/ucw.demo" weight="1000">
+        <label>UCW Demo</label>
+        <description>UCW Demo Examples</description>
+    </navigation-section>
+
+    <navigation-item key="ucw-dashboard_nav-main_dashboard" name="UCW Dashboard"
+                     section="system.top.navigation.bar/ucw.demo" weight="0">
+        <label>UCW Dashboard</label>
+        <link>/dashboard/view/ucw-dashboard</link>
+        <conditions>
+            <condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+        </conditions>
+    </navigation-item>
+
+    <navigation-item key="ucw-dashboard_nav-main_dashboard_monitoring" name="UCW Dashboard Monitoring"
+                     section="system.top.navigation.bar/ucw.demo" weight="0">
+        <label>UCW Dashboard Monitoring</label>
+        <link>/ucw-dashboard/monitoring</link>
+        <conditions>
+            <condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+        </conditions>
+    </navigation-item>
+
+    <!-- Main Navigation [END] -->
+
+    <!-- Navigation 'system.admin/ucw.demo' [BEGIN] -->
+
+    <navigation-section key="ucw-portal-tutorial_admin-demo" name="UCW Demo Administration Navigation"
+                        location="system.admin/ucw.demo" weight="90">
+        <label>UCW Demo</label>
+    </navigation-section>
+
+    <navigation-item key="ucw-dashboard_admin-dashboard-settings" name="UCW Dashboard Settings"
+                     section="system.admin/ucw.demo" weight="0">
+        <label>UCW Dashboard Settings</label>
+        <link>/ucw-dashboard/admin</link>
+    </navigation-item>
+
+    <!-- Navigation 'system.admin/ucw.demo' [END] -->
+
+    <!-- Navigation 'ucw.tutorial.dashboard.header.actions' [BEGIN] -->
+
+    <navigation-section key="ucw-dashboard_dashboard-header-actions" name="UCW Dashboard Header Actions"
+                        location="ucw.tutorial.dashboard.header.actions" weight="0">
+        <label>Dashboard Header Actions</label>
+    </navigation-section>
+
+    <navigation-item key="ucw-dashboard_dashboard-header-actions_dashboard" name="UCW Dashboard"
+                     section="ucw.tutorial.dashboard.header.actions" weight="0">
+        <label>Dashboard</label>
+        <link>/dashboard/view/ucw-dashboard</link>
+    </navigation-item>
+
+    <navigation-item key="ucw-dashboard_dashboard-header-actions_settings" name="UCW Dashboard Administration"
+                     section="ucw.tutorial.dashboard.header.actions" weight="0">
+        <label>Settings</label>
+        <link>/ucw-dashboard/admin</link>
+    </navigation-item>
+
+    <!-- Navigation 'ucw.tutorial.dashboard.header.actions' [END] -->
+
+    <!-- UCW Dashboard Web Resources [BEGIN] -->
+
+    <portal-resource key="ucw-dashboard_monitoring-resources" name="UCW Dashboard Monitoring Web Resources">
+        <context>ucw.dashboard.monitoring</context>
+        <resource type="download" name="dashboard-monitoring.js" location="/resources/js/dashboard-monitoring.js" />
+    </portal-resource>
+
+    <!-- UCW Dashboard Web Resources [END] -->
+
+    <!-- UCW Portal Administration Gadgets [BEGIN] -->
+
+    <admin-gadget key="ucw-dashboard_admin-gadget_dashboard" name="UCW Dashboard Admin Gadget"
+                  class="com.unitycloudware.portal.tutorial.dashboard.gadget.DashboardAdminGadget">
+        <description>Provides an overview for the UCW Dashboard gadget.</description>
+        <label>UCW Dashboard</label>
+        <column>left</column>
+        <order>2</order>
+    </admin-gadget>
+
+    <!-- UCW Portal Administration Gadgets [END] -->
+
+    <!-- Dashboard Gadgets [BEGIN] -->
+
+    <dashboard key="ucw-dashboard_dashboard" name="UCW Dashboard">
+        <description>This dashboard provides an overview about UCW Dashboard.</description>
+        <label>UCW Dashboard</label>
+        <viewId>ucw-dashboard</viewId>
+        <imageUri>${contextPath}/download/resources/com.unitycloudware.portal.tutorial.plugins.ucw-portal-dashboard/resources/images/ucw_logo.png</imageUri>
+        <actionButtons>ucw.tutorial.dashboard.header.actions</actionButtons>
+    </dashboard>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget1" name="Data Measurement Gadget # 1"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>left</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget2" name="Data Measurement Gadget # 2"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>left</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget3" name="Data Measurement Gadget # 3"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>left</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget4" name="Data Measurement Gadget # 4"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>right</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget5" name="Data Measurement Gadget # 5"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>right</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget6" name="Data Measurement Gadget # 6"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
+        <description>Provides information about data measurement.</description>
+        <label>Data Measurement</label>
+        <column>right</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
+    <!-- Dashboard Gadgets [END] -->
+
+</nsys-plugin>

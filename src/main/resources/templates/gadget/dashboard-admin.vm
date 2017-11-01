@@ -1,0 +1,16 @@
+$portalResourceManager.requireResourcesForContext("nsys.portal.admin")
+
+<section class="admin-section">
+    <h3>$!{gadget.displayName}</h3>
+    <ul class="overview-links">
+        <li>
+            <a href="/ucw-dashboard/admin" id="ucw-dashboard-admin" title="Administration">Administration</a>
+            <span class="description">Shows administration of the UCW Dashboard plugin.</span>
+        </li>
+        <li>
+            <a href="/plugins/ucw-dashboard/ucw-dashboard/admin/settings"
+               id="ucw-dashboard-admin-settings" title="Settings">Settings</a>
+            <span class="description">UCW Dashboard Settings.</span>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,29 @@
+<header class="aui-page-header">
+    <div class="aui-page-header-inner">
+        <div class="aui-page-header-main">
+            <h2>$!{headerName}</h2>
+        </div>
+    </div>
+</header>
+<div class="aui-group">
+    <div class="aui-item">
+        <br/>
+        <table class="aui aui-table-interactive aui-table-sortable">
+            <thead>
+            <tr>
+                <th id="property-name">Property Name</th>
+                <th id="property-value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+                #foreach ($entry in $props.keySet())
+                    #set ($value = $props.get($!{entry}))
+                <tr>
+                    <td headers="property-name">$!{entry}</td>
+                    <td headers="property-value">$!{value}</td>
+                </tr>
+                #end
+            </tbody>
+        </table>
+    </div>
+</div>
