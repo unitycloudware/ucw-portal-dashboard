@@ -48,6 +48,22 @@
         </profile>
     </profiles>
 
+    <distributionManagement>
+        <repository>
+            <id>ucw-maven-repository</id>
+            <name>UCW Repository - Releases</name>
+            <url>http://maven.unitycloudware.com/repository/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>ucw-maven-repository</id>
+            <name>UCW Repository - Snapshots</name>
+            <url>http://maven.unitycloudware.com/repository/snapshots/</url>
+            <layout>default</layout>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>nsys-repository</id>
