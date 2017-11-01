@@ -184,7 +184,7 @@
                 	<productVersion>${ucw.version}</productVersion>
                 	<buildNumber>${build.number}</buildNumber> <!-- ${build.number}=${build.version}.${build.counter} -->
                 	<jvmArgs>-Ducw.tutorial.dashboard.debug=false</jvmArgs>
-					<port>9570</port>
+					<port>9571</port>
                     <!-- <dbConfigPath>${project.build.directory}/container/ucw1x/conf/database-portal.properties</dbConfigPath> -->
                 	<!-- <nsysConfigPath>${project.build.directory}/container/ucw1x/conf/nsys-portal.cfg</nsysConfigPath> -->
                 	<!-- <log4jConfigPath>${project.build.directory}/container/ucw1x/conf/log4j-portal.xml</log4jConfigPath> -->

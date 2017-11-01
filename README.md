@@ -16,7 +16,7 @@ The UCW Dashboard is an example how to implement a dashboard and a gadget for UC
  * cd "project root"
  * ./build.sh
  * ./run-portal.sh
- * Browse to [http://localhost:9570](http://localhost:9570).
+ * Browse to [http://localhost:9571](http://localhost:9571).
  * Use default user "admin" and password "admin" to login
 
 
