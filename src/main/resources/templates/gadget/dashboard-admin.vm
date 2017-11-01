@@ -8,7 +8,7 @@ $portalResourceManager.requireResourcesForContext("nsys.portal.admin")
             <span class="description">Shows administration of the UCW Dashboard plugin.</span>
         </li>
         <li>
-            <a href="/plugins/ucw-dashboard/ucw-dashboard/admin/settings"
+            <a href="/plugins/ucw-dashboard-tutorial/ucw-dashboard/admin/settings"
                id="ucw-dashboard-admin-settings" title="Settings">Settings</a>
             <span class="description">UCW Dashboard Settings.</span>
         </li>
