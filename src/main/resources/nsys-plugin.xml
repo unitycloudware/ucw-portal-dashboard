@@ -108,7 +108,7 @@
         <description>This dashboard provides an overview about UCW Dashboard.</description>
         <label>UCW Dashboard</label>
         <viewId>ucw-dashboard</viewId>
-        <imageUri>${contextPath}/download/resources/com.unitycloudware.portal.tutorial.plugins.ucw-portal-dashboard/resources/images/ucw_logo.png</imageUri>
+        <imageUri>${portalResourcesUrl}/resources/images/ucw_logo.png</imageUri>
         <actionButtons>ucw.tutorial.dashboard.header.actions</actionButtons>
     </dashboard>
 
