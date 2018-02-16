@@ -139,6 +139,15 @@
         <view>ucw-dashboard</view>
     </dashboard-gadget>
 
+    <dashboard-gadget key="ucw-dashboard_sensor-data-gadget" name="Sensor Data Gadget"
+                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.SensorDataGadget">
+        <description>Provides information about sensor data measurement.</description>
+        <label>Sensor Data</label>
+        <column>right</column>
+        <order>0</order>
+        <view>ucw-dashboard</view>
+    </dashboard-gadget>
+
     <dashboard-gadget key="ucw-dashboard_data-measurement-gadget4" name="Data Measurement Gadget # 4"
                       class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
         <description>Provides information about data measurement.</description>
@@ -149,15 +158,6 @@
     </dashboard-gadget>
 
     <dashboard-gadget key="ucw-dashboard_data-measurement-gadget5" name="Data Measurement Gadget # 5"
-                      class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
-        <description>Provides information about data measurement.</description>
-        <label>Data Measurement</label>
-        <column>right</column>
-        <order>0</order>
-        <view>ucw-dashboard</view>
-    </dashboard-gadget>
-
-    <dashboard-gadget key="ucw-dashboard_data-measurement-gadget6" name="Data Measurement Gadget # 6"
                       class="com.unitycloudware.portal.tutorial.dashboard.gadget.DataMeasurementGadget">
         <description>Provides information about data measurement.</description>
         <label>Data Measurement</label>
