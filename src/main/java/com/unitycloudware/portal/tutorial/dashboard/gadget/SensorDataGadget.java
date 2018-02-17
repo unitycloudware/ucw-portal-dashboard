@@ -84,7 +84,7 @@ public class SensorDataGadget extends AbstractGadget {
         }
 
         for (DataStreamItem item : items) {
-            // Process only data for data stream with type of Data Message
+            // Process only data for data stream with type of DATA_MESSAGE
             if (item.getType() != DataStreamType.DATA_MESSAGE) {
                 continue;
             }
