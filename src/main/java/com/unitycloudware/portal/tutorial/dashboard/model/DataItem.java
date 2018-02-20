@@ -3,12 +3,15 @@
 
 package com.unitycloudware.portal.tutorial.dashboard.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Data Item
  *
  * @author Tomas Hrdlicka <tomas@hrdlicka.co.uk>
  * @see <a href="http://unitycloudware.com">Unity{Cloud}Ware</a>
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DataItem {
     private double temperature;
     private int humidity;
