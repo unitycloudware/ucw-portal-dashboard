@@ -22,8 +22,8 @@ import com.unitycloudware.portal.tutorial.dashboard.DashboardConfig;
  */
 public class DashboardPlugin extends AbstractManagementAgentPlugin {
 
-    public static final String DASHBOARD_VIEW = "nsys.portal.dashboard.view.default";
-    public static final String DASHBOARD_VIEW_DEFAULT = "ucw-dashboard";
+    public static final String PORTAL_REDIRECT = "nsys.portal.redirect";
+    public static final String PORTAL_REDIRECT_DEFAULT = "/admin";
 
     @Override
     public void load(final PluginContext context) {
@@ -65,7 +65,7 @@ public class DashboardPlugin extends AbstractManagementAgentPlugin {
 
     protected void customPortalConfig() {
         Properties customPortalConfig = new Properties();
-        customPortalConfig.setProperty(DASHBOARD_VIEW, DASHBOARD_VIEW_DEFAULT);
+        customPortalConfig.setProperty(PORTAL_REDIRECT, PORTAL_REDIRECT_DEFAULT);
 
         ConfigurationManager.getInstance().merge(customPortalConfig, true);
     }
