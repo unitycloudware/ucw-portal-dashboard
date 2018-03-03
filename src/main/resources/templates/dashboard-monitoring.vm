@@ -1,3 +1,0 @@
-$portalResourceManager.requireResourcesForContext("ucw.dashboard.monitoring")
-
-<p>$!{msg}</p>
