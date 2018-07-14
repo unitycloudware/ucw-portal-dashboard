@@ -44,7 +44,7 @@ deploy-to-dev:
     - /bin/true
 
 deploy-plugin:
-  image: ubuntu:16.04
+  image: ubuntu:18.04
   stage: deploy-plugin
   dependencies:
     - build-plugin
